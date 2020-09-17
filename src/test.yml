@@ -1,0 +1,20 @@
+containers:
+
+  - name: hello5
+    networks:
+      - net3
+      - net2
+      
+  - name: vm3
+    networks:
+      - net1
+
+networks:
+
+  - name: net1
+    subnet: 200.1.0.0/16
+    gateway: 200.1.0.1
+
+  - name: net2
+    subnet: 200.2.0.0/16
+    gateway: 200.2.0.1
