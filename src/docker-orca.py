@@ -12,18 +12,19 @@ def read_configuration(filename):
 def system_up(config, project_name):
     print("starting")
     # 1. Create networks
+    for a in config['networks']:
+        print(a)
     # 2. Start containers
     # 3. Disconnect from none
     # 4. Connect to networks as needed, config network interface
     # 5. Execute commands inside containers after all network is ready
-    print("config is " + str(read_configuration(sys.argv[2])))
 
 def system_down(config, project_name):
     print("stopping")
 
 # Run using: docker-orca.py <start/stop> <cfg_file> <name>
 if __name__ == "__main__":
-    
+
     # Load parameters
     opname = sys.argv[1] 
     config = read_configuration(sys.argv[2])
