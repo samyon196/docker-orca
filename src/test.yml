@@ -8,6 +8,7 @@ containers:
   - name: vm3
     networks:
       - net1
+      
 
 networks:
 
